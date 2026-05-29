@@ -1,0 +1,1937 @@
+[
+  {
+    "IATA_CODE": "INU",
+    "CITY_NAME": "Yaren",
+    "REGION": "Yaren District",
+    "COUNTRY_NAME": "Nauru",
+    "ALIASES": ["Yaren", "Yaren District", "Makwa", "Naoero"],
+    "TRANSLATION": {
+      "zh": "亚伦",
+      "ja": "ヤレン",
+      "ko": "야렌",
+      "ar": "يارين",
+      "ru": "Ярен",
+      "th": "ยาเรน",
+      "latin_diacritics": "Yaren"
+    },
+    "type": "MEDIUM",
+    "LAT": -0.547893,
+    "LONG": 166.919525
+  },
+  {
+    "IATA_CODE": "JEG",
+    "CITY_NAME": "Aasiaat",
+    "REGION": "Qeqertalik",
+    "COUNTRY_NAME": "Greenland",
+    "ALIASES": ["Aasiaat", "Egedesminde", "Ausiait"],
+    "TRANSLATION": {
+      "zh": "阿西亚特",
+      "ja": "アシアート",
+      "ko": "아시아트",
+      "ar": "آسياط",
+      "ru": "Аасиат",
+      "th": "อาเซียต",
+      "latin_diacritics": "Aasiaat"
+    },
+    "type": "MEDIUM",
+    "LAT": 68.721802,
+    "LONG": -52.784698
+  },
+  {
+    "IATA_CODE": "GOH",
+    "CITY_NAME": "Nuuk",
+    "REGION": "Sermersooq",
+    "COUNTRY_NAME": "Greenland",
+    "ALIASES": ["Nuuk", "Godthåb", "Godthaab", "Nuussuaq"],
+    "TRANSLATION": {
+      "zh": "努克",
+      "ja": "ヌーク",
+      "ko": "누크",
+      "ar": "نوك",
+      "ru": "Нуук",
+      "th": "นูก",
+      "latin_diacritics": "Nuuk"
+    },
+    "type": "LARGE",
+    "LAT": 64.191066,
+    "LONG": -51.67914
+  },
+  {
+    "IATA_CODE": "JAV",
+    "CITY_NAME": "Ilulissat",
+    "REGION": "Avannaata",
+    "COUNTRY_NAME": "Greenland",
+    "ALIASES": ["Ilulissat", "Jakobshavn", "Jakobshaven"],
+    "TRANSLATION": {
+      "zh": "伊卢利萨特",
+      "ja": "イルリサット",
+      "ko": "일루리사트",
+      "ar": "إيلوليساط",
+      "ru": "Илулиссат",
+      "th": "อิลูลิสซัต",
+      "latin_diacritics": "Ilulissat"
+    },
+    "type": "MEDIUM",
+    "LAT": 69.243202,
+    "LONG": -51.057098
+  },
+  {
+    "IATA_CODE": "JHS",
+    "CITY_NAME": "Sisimiut",
+    "REGION": "Qeqqata",
+    "COUNTRY_NAME": "Greenland",
+    "ALIASES": ["Sisimiut", "Holsteinsborg"],
+    "TRANSLATION": {
+      "zh": "西西缪特",
+      "ja": "シシミウト",
+      "ko": "시시미우트",
+      "ar": "سيسيميوت",
+      "ru": "Сисимиут",
+      "th": "ซิซิมิอุต",
+      "latin_diacritics": "Sisimiut"
+    },
+    "type": "MEDIUM",
+    "LAT": 66.951302,
+    "LONG": -53.729301
+  },
+  {
+    "IATA_CODE": "AEY",
+    "CITY_NAME": "Akureyri",
+    "REGION": "Northeastern Region",
+    "COUNTRY_NAME": "Iceland",
+    "ALIASES": ["Akureyri", "Akureyrarflugvöllur"],
+    "TRANSLATION": {
+      "zh": "阿克雷里",
+      "ja": "アクレイリ",
+      "ko": "아쿠레이리",
+      "ar": "أكوريري",
+      "ru": "Акюрейри",
+      "th": "อาคูเรย์รี",
+      "latin_diacritics": "Akureyri"
+    },
+    "type": "LARGE",
+    "LAT": 65.66,
+    "LONG": -18.0727
+  },
+  {
+    "IATA_CODE": "GRY",
+    "CITY_NAME": "Grímsey",
+    "REGION": "Northeastern Region",
+    "COUNTRY_NAME": "Iceland",
+    "ALIASES": ["Grímsey", "Grimsey", "Sandvík"],
+    "TRANSLATION": {
+      "zh": "格里姆塞岛",
+      "ja": "グリームセイ",
+      "ko": "그림세이",
+      "ar": "غريمسي",
+      "ru": "Гримсей",
+      "th": "กริมเซย์",
+      "latin_diacritics": "Grímsey"
+    },
+    "type": "MEDIUM",
+    "LAT": 66.5458,
+    "LONG": -18.0173
+  },
+  {
+    "IATA_CODE": "IFJ",
+    "CITY_NAME": "Ísafjörður",
+    "REGION": "Westfjords",
+    "COUNTRY_NAME": "Iceland",
+    "ALIASES": ["Ísafjörður", "Isafjordur", "Isafjörður"],
+    "TRANSLATION": {
+      "zh": "伊萨菲厄泽",
+      "ja": "イーサフィヨルズゥル",
+      "ko": "이사피외르뒤르",
+      "ar": "إيسافيوردور",
+      "ru": "Исафьордюр",
+      "th": "อีซาฟยอร์ดูร์",
+      "latin_diacritics": "Ísafjörður"
+    },
+    "type": "MEDIUM",
+    "LAT": 66.0581,
+    "LONG": -23.1353
+  },
+  {
+    "IATA_CODE": "KEF",
+    "CITY_NAME": "Reykjavík",
+    "REGION": "Southern Peninsula",
+    "COUNTRY_NAME": "Iceland",
+    "ALIASES": ["Reykjavík", "Reykjavik", "Keflavík", "Keflavik"],
+    "TRANSLATION": {
+      "zh": "雷克雅未克",
+      "ja": "レイキャビク",
+      "ko": "레이캬비크",
+      "ar": "ريكيافيك",
+      "ru": "Рейкьявик",
+      "th": "เรคยาวิก",
+      "latin_diacritics": "Reykjavík"
+    },
+    "type": "LARGE",
+    "LAT": 63.985,
+    "LONG": -22.6056
+  },
+  {
+    "IATA_CODE": "PRN",
+    "CITY_NAME": "Prishtina",
+    "REGION": "Pristina",
+    "COUNTRY_NAME": "Kosovo",
+    "ALIASES": ["Prishtina", "Pristina", "Priština", "Prishtinë"],
+    "TRANSLATION": {
+      "zh": "普里什蒂纳",
+      "ja": "プリシュティナ",
+      "ko": "프리슈티나",
+      "ar": "بريشتينا",
+      "ru": "Приштина",
+      "th": "ปริชตีนา",
+      "latin_diacritics": "Priština"
+    },
+    "type": "LARGE",
+    "LAT": 42.5728,
+    "LONG": 21.0359
+  },
+  {
+    "IATA_CODE": "XQU",
+    "CITY_NAME": "Qualicum Beach",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Qualicum Beach", "Qualicum"],
+    "TRANSLATION": {
+      "zh": "夸利克姆比奇",
+      "ja": "クオリカム・ビーチ",
+      "ko": "퀄리컴 비치",
+      "ar": "كواليكوم بيتش",
+      "ru": "Куаликум-Бич",
+      "th": "ควอลิคัมบีช",
+      "latin_diacritics": "Qualicum Beach"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.3372,
+    "LONG": -124.394
+  },
+  {
+    "IATA_CODE": "YAM",
+    "CITY_NAME": "Sault Ste. Marie",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Sault Ste. Marie", "Sault Sainte Marie", "The Soo"],
+    "TRANSLATION": {
+      "zh": "苏圣玛丽",
+      "ja": "スーセントマリー",
+      "ko": "수세인트마리",
+      "ar": "سو سانت ماري",
+      "ru": "Су-Сент-Мари",
+      "th": "ซูเซนต์มารี",
+      "latin_diacritics": "Sault Ste. Marie"
+    },
+    "type": "MEDIUM",
+    "LAT": 46.485001,
+    "LONG": -84.509399
+  },
+  {
+    "IATA_CODE": "YAZ",
+    "CITY_NAME": "Tofino",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Tofino", "Long Beach", "Tofino/Long Beach"],
+    "TRANSLATION": {
+      "zh": "托菲诺",
+      "ja": "トフィーノ",
+      "ko": "토피노",
+      "ar": "توفينو",
+      "ru": "Тофино",
+      "th": "โทฟิโน",
+      "latin_diacritics": "Tofino"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.0794,
+    "LONG": -125.7755
+  },
+  {
+    "IATA_CODE": "YBY",
+    "CITY_NAME": "Bonnyville",
+    "REGION": "Alberta",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Bonnyville"],
+    "TRANSLATION": {
+      "zh": "邦尼维尔",
+      "ja": "ボニービル",
+      "ko": "보니빌",
+      "ar": "بونيفيل",
+      "ru": "Боннивилл",
+      "th": "บอนนีวิลล์",
+      "latin_diacritics": "Bonnyville"
+    },
+    "type": "MEDIUM",
+    "LAT": 54.304199,
+    "LONG": -110.744003
+  },
+  {
+    "IATA_CODE": "YCD",
+    "CITY_NAME": "Nanaimo",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Nanaimo", "Cassidy"],
+    "TRANSLATION": {
+      "zh": "纳奈莫",
+      "ja": "ナナイモ",
+      "ko": "나나이모",
+      "ar": "نانايمو",
+      "ru": "Нанаймо",
+      "th": "นาไนโม",
+      "latin_diacritics": "Nanaimo"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.0521,
+    "LONG": -123.8704
+  },
+  {
+    "IATA_CODE": "YCG",
+    "CITY_NAME": "Castlegar",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Castlegar", "West Kootenay"],
+    "TRANSLATION": {
+      "zh": "卡斯尔加",
+      "ja": "キャッスルガー",
+      "ko": "캐슬가",
+      "ar": "كاسلجار",
+      "ru": "Каслгар",
+      "th": "แคสเซิลการ์",
+      "latin_diacritics": "Castlegar"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.296101,
+    "LONG": -117.632004
+  },
+  {
+    "IATA_CODE": "YDF",
+    "CITY_NAME": "Deer Lake",
+    "REGION": "Newfoundland and Labrador",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Deer Lake"],
+    "TRANSLATION": {
+      "zh": "迪尔莱克",
+      "ja": "ディアレイク",
+      "ko": "디어 레이크",
+      "ar": "دير لايك",
+      "ru": "Дир-Лейк",
+      "th": "เดียร์เลก",
+      "latin_diacritics": "Deer Lake"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.2108,
+    "LONG": -57.391399
+  },
+  {
+    "IATA_CODE": "YEG",
+    "CITY_NAME": "Edmonton",
+    "REGION": "Alberta",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Edmonton", "Edmonton International"],
+    "TRANSLATION": {
+      "zh": "埃德蒙顿",
+      "ja": "エドモントン",
+      "ko": "에드먼턴",
+      "ar": "إدمونتون",
+      "ru": "Эдмонтон",
+      "th": "เอดมันตัน",
+      "latin_diacritics": "Edmonton"
+    },
+    "type": "LARGE",
+    "LAT": 53.309722,
+    "LONG": -113.579994
+  },
+  {
+    "IATA_CODE": "YHM",
+    "CITY_NAME": "Hamilton",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Hamilton", "John C. Munro Hamilton"],
+    "TRANSLATION": {
+      "zh": "汉密尔顿",
+      "ja": "ハミルトン",
+      "ko": "해밀턴",
+      "ar": "هاميلتون",
+      "ru": "Гамильтон",
+      "th": "แฮมิลตัน",
+      "latin_diacritics": "Hamilton"
+    },
+    "type": "MEDIUM",
+    "LAT": 43.173599,
+    "LONG": -79.934998
+  },
+  {
+    "IATA_CODE": "YHU",
+    "CITY_NAME": "Montréal",
+    "REGION": "Quebec",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Montréal", "Montreal", "Saint-Hubert", "Longueuil"],
+    "TRANSLATION": {
+      "zh": "蒙特利尔",
+      "ja": "モントリオール",
+      "ko": "몬트리올",
+      "ar": "مونتريال",
+      "ru": "Монреаль",
+      "th": "มอนทรีออล",
+      "latin_diacritics": "Montréal"
+    },
+    "type": "MEDIUM",
+    "LAT": 45.5175,
+    "LONG": -73.4169
+  },
+  {
+    "IATA_CODE": "YHZ",
+    "CITY_NAME": "Halifax",
+    "REGION": "Nova Scotia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Halifax", "Stanfield", "Enfield"],
+    "TRANSLATION": {
+      "zh": "哈利法克斯",
+      "ja": "ハリファックス",
+      "ko": "핼리팩스",
+      "ar": "هاليفاكس",
+      "ru": "Галифакс",
+      "th": "แฮลิแฟกซ์",
+      "latin_diacritics": "Halifax"
+    },
+    "type": "LARGE",
+    "LAT": 44.880798,
+    "LONG": -63.508598
+  },
+  {
+    "IATA_CODE": "YJT",
+    "CITY_NAME": "Stephenville",
+    "REGION": "Newfoundland and Labrador",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Stephenville", "Stephenville Dymond"],
+    "TRANSLATION": {
+      "zh": "斯蒂芬维尔",
+      "ja": "スティーブンビル",
+      "ko": "스티븐빌",
+      "ar": "ستيفنفيل",
+      "ru": "Стивенвилл",
+      "th": "สตีเฟนวิลล์",
+      "latin_diacritics": "Stephenville"
+    },
+    "type": "MEDIUM",
+    "LAT": 48.5442,
+    "LONG": -58.5499
+  },
+  {
+    "IATA_CODE": "YKF",
+    "CITY_NAME": "Waterloo",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": [
+      "Waterloo",
+      "Breslau",
+      "Kitchener-Waterloo",
+      "Region of Waterloo"
+    ],
+    "TRANSLATION": {
+      "zh": "滑铁卢",
+      "ja": "ウォータールー",
+      "ko": "워털루",
+      "ar": "واترلو",
+      "ru": "Ватерлоо",
+      "th": "วอเตอร์ลู",
+      "latin_diacritics": "Waterloo"
+    },
+    "type": "MEDIUM",
+    "LAT": 43.4608,
+    "LONG": -80.378601
+  },
+  {
+    "IATA_CODE": "YLK",
+    "CITY_NAME": "Barrie",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Barrie", "Lake Simcoe", "Barrie-Lake Simcoe"],
+    "TRANSLATION": {
+      "zh": "巴里",
+      "ja": "バリー",
+      "ko": "배리",
+      "ar": "باري",
+      "ru": "Барри",
+      "th": "บาร์รี",
+      "latin_diacritics": "Barrie"
+    },
+    "type": "MEDIUM",
+    "LAT": 44.4811,
+    "LONG": -79.5567
+  },
+  {
+    "IATA_CODE": "YLW",
+    "CITY_NAME": "Kelowna",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Kelowna"],
+    "TRANSLATION": {
+      "zh": "基洛纳",
+      "ja": "ケロウナ",
+      "ko": "켈로나",
+      "ar": "كيلونا",
+      "ru": "Келоуна",
+      "th": "เคโลว์นา",
+      "latin_diacritics": "Kelowna"
+    },
+    "type": "LARGE",
+    "LAT": 49.9561,
+    "LONG": -119.3779
+  },
+  {
+    "IATA_CODE": "YND",
+    "CITY_NAME": "Gatineau",
+    "REGION": "Quebec",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Gatineau", "Ottawa/Gatineau"],
+    "TRANSLATION": {
+      "zh": "加蒂诺",
+      "ja": "ガティノー",
+      "ko": "가티노",
+      "ar": "غاتينو",
+      "ru": "Гатино",
+      "th": "กาตีโน",
+      "latin_diacritics": "Gatineau"
+    },
+    "type": "MEDIUM",
+    "LAT": 45.5217,
+    "LONG": -75.5633
+  },
+  {
+    "IATA_CODE": "YOW",
+    "CITY_NAME": "Ottawa",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Ottawa", "Macdonald-Cartier"],
+    "TRANSLATION": {
+      "zh": "渥太华",
+      "ja": "オタワ",
+      "ko": "오타와",
+      "ar": "أوتاوا",
+      "ru": "Оттава",
+      "th": "ออตตาวา",
+      "latin_diacritics": "Ottawa"
+    },
+    "type": "LARGE",
+    "LAT": 45.3225,
+    "LONG": -75.6692
+  },
+  {
+    "IATA_CODE": "YPQ",
+    "CITY_NAME": "Peterborough",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Peterborough"],
+    "TRANSLATION": {
+      "zh": "彼得伯勒",
+      "ja": "ピーターバラ",
+      "ko": "피터버러",
+      "ar": "بيتربورو",
+      "ru": "Питерборо",
+      "th": "ปีเตอร์โบโร",
+      "latin_diacritics": "Peterborough"
+    },
+    "type": "MEDIUM",
+    "LAT": 44.2299,
+    "LONG": -78.3633
+  },
+  {
+    "IATA_CODE": "YPR",
+    "CITY_NAME": "Prince Rupert",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Prince Rupert", "Digby Island"],
+    "TRANSLATION": {
+      "zh": "鲁珀特王子港",
+      "ja": "プリンス・ルパート",
+      "ko": "프린스루퍼트",
+      "ar": "برنس روبرت",
+      "ru": "Принс-Руперт",
+      "th": "พรินซ์รูเพิร์ต",
+      "latin_diacritics": "Prince Rupert"
+    },
+    "type": "MEDIUM",
+    "LAT": 54.2861,
+    "LONG": -130.4453
+  },
+  {
+    "IATA_CODE": "YQB",
+    "CITY_NAME": "Québec City",
+    "REGION": "Quebec",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Québec City", "Quebec City", "Québec", "Jean Lesage"],
+    "TRANSLATION": {
+      "zh": "魁北克市",
+      "ja": "ケベック・シティ",
+      "ko": "퀘벡시티",
+      "ar": "مدينة كيبك",
+      "ru": "Квебек",
+      "th": "เมืองควิเบก",
+      "latin_diacritics": "Québec"
+    },
+    "type": "LARGE",
+    "LAT": 46.7911,
+    "LONG": -71.3933
+  },
+  {
+    "IATA_CODE": "YQM",
+    "CITY_NAME": "Moncton",
+    "REGION": "New Brunswick",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Moncton", "Greater Moncton", "Roméo LeBlanc"],
+    "TRANSLATION": {
+      "zh": "蒙克顿",
+      "ja": "モンクトン",
+      "ko": "몽크턴",
+      "ar": "مونكتون",
+      "ru": "Монктон",
+      "th": "มองก์ตัน",
+      "latin_diacritics": "Moncton"
+    },
+    "type": "MEDIUM",
+    "LAT": 46.1122,
+    "LONG": -64.6786
+  },
+  {
+    "IATA_CODE": "YQQ",
+    "CITY_NAME": "Comox",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Comox", "Comox Valley", "CFB Comox"],
+    "TRANSLATION": {
+      "zh": "科莫克斯",
+      "ja": "コモックス",
+      "ko": "코목스",
+      "ar": "كوموكس",
+      "ru": "Комокс",
+      "th": "โคม็อกซ์",
+      "latin_diacritics": "Comox"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.7108,
+    "LONG": -124.8866
+  },
+  {
+    "IATA_CODE": "YQU",
+    "CITY_NAME": "Grande Prairie",
+    "REGION": "Alberta",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Grande Prairie"],
+    "TRANSLATION": {
+      "zh": "大草原城",
+      "ja": "グランド・プレーリー",
+      "ko": "그랜드프레리",
+      "ar": "غراند بريري",
+      "ru": "Гранд-Прери",
+      "th": "แกรนด์แพรรี",
+      "latin_diacritics": "Grande Prairie"
+    },
+    "type": "MEDIUM",
+    "LAT": 55.1796,
+    "LONG": -118.885
+  },
+  {
+    "IATA_CODE": "YQY",
+    "CITY_NAME": "Sydney",
+    "REGION": "Nova Scotia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Sydney", "Cape Breton", "J.A. Douglas McCurdy"],
+    "TRANSLATION": {
+      "zh": "悉尼 (新斯科舍省)",
+      "ja": "シドニー (ノバスコシア)",
+      "ko": "시드니 (노바스코샤)",
+      "ar": "سيدني (نوفا سكوشا)",
+      "ru": "Сидни (Новая Шотландия)",
+      "th": "ซิดนีย์ (โนวาสโกเชีย)",
+      "latin_diacritics": "Sydney"
+    },
+    "type": "MEDIUM",
+    "LAT": 46.1614,
+    "LONG": -60.0478
+  },
+  {
+    "IATA_CODE": "YRO",
+    "CITY_NAME": "Ottawa",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Ottawa", "Rockcliffe"],
+    "TRANSLATION": {
+      "zh": "渥太华",
+      "ja": "オタワ",
+      "ko": "오타와",
+      "ar": "أوتاوا",
+      "ru": "Оттава",
+      "th": "ออตตาวา",
+      "latin_diacritics": "Ottawa"
+    },
+    "type": "MEDIUM",
+    "LAT": 45.4603,
+    "LONG": -75.6461
+  },
+  {
+    "IATA_CODE": "YTS",
+    "CITY_NAME": "Timmins",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Timmins", "Victor M. Power"],
+    "TRANSLATION": {
+      "zh": "蒂明斯",
+      "ja": "ティミンズ",
+      "ko": "티민스",
+      "ar": "تيمينز",
+      "ru": "Тимминс",
+      "th": "ทิมมินส์",
+      "latin_diacritics": "Timmins"
+    },
+    "type": "MEDIUM",
+    "LAT": 48.5697,
+    "LONG": -81.3767
+  },
+  {
+    "IATA_CODE": "YTZ",
+    "CITY_NAME": "Toronto",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": [
+      "Toronto",
+      "Billy Bishop",
+      "Toronto Island",
+      "Toronto City Centre"
+    ],
+    "TRANSLATION": {
+      "zh": "多伦多",
+      "ja": "トロント",
+      "ko": "토론토",
+      "ar": "تورونتو",
+      "ru": "Торонто",
+      "th": "โทรอนโต",
+      "latin_diacritics": "Toronto"
+    },
+    "type": "MEDIUM",
+    "LAT": 43.6275,
+    "LONG": -79.3961
+  },
+  {
+    "IATA_CODE": "YUL",
+    "CITY_NAME": "Montréal",
+    "REGION": "Quebec",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": [
+      "Montréal",
+      "Montreal",
+      "Pierre Elliott Trudeau",
+      "Dorval",
+      "Mirabel"
+    ],
+    "TRANSLATION": {
+      "zh": "蒙特利尔",
+      "ja": "モントリオール",
+      "ko": "몬트리올",
+      "ar": "مونتريال",
+      "ru": "Монреаль",
+      "th": "มอนทรีออล",
+      "latin_diacritics": "Montréal"
+    },
+    "type": "LARGE",
+    "LAT": 45.4706,
+    "LONG": -73.7408
+  },
+  {
+    "IATA_CODE": "YVO",
+    "CITY_NAME": "Val-d'Or",
+    "REGION": "Quebec",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Val-d'Or", "Val d'Or", "Vald'Or"],
+    "TRANSLATION": {
+      "zh": "瓦勒多尔",
+      "ja": "ヴァル＝ドール",
+      "ko": "발도르",
+      "ar": "فال دور",
+      "ru": "Валь-д'Ор",
+      "th": "วัล-ดอร์",
+      "latin_diacritics": "Val-d'Or"
+    },
+    "type": "MEDIUM",
+    "LAT": 48.0533,
+    "LONG": -77.7828
+  },
+  {
+    "IATA_CODE": "YVR",
+    "CITY_NAME": "Vancouver",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Vancouver", "YVR", "Richmond"],
+    "TRANSLATION": {
+      "zh": "温哥华",
+      "ja": "バンクーバー",
+      "ko": "밴쿠버",
+      "ar": "فانكوفر",
+      "ru": "Ванкувер",
+      "th": "แวนคูเวอร์",
+      "latin_diacritics": "Vancouver"
+    },
+    "type": "LARGE",
+    "LAT": 49.1939,
+    "LONG": -123.184
+  },
+  {
+    "IATA_CODE": "YVV",
+    "CITY_NAME": "Wiarton",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Wiarton"],
+    "TRANSLATION": {
+      "zh": "怀亚顿",
+      "ja": "ワイアートン",
+      "ko": "와이어튼",
+      "ar": "وايارتون",
+      "ru": "Уайартон",
+      "th": "ไวอาร์ตัน",
+      "latin_diacritics": "Wiarton"
+    },
+    "type": "MEDIUM",
+    "LAT": 44.7458,
+    "LONG": -81.1072
+  },
+  {
+    "IATA_CODE": "YWG",
+    "CITY_NAME": "Winnipeg",
+    "REGION": "Manitoba",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Winnipeg", "James Armstrong Richardson"],
+    "TRANSLATION": {
+      "zh": "温尼伯",
+      "ja": "ウィニペグ",
+      "ko": "위니펙",
+      "ar": "وينيبيغ",
+      "ru": "Виннипег",
+      "th": "วินนิเพ็ก",
+      "latin_diacritics": "Winnipeg"
+    },
+    "type": "LARGE",
+    "LAT": 49.91,
+    "LONG": -97.2399
+  },
+  {
+    "IATA_CODE": "YXC",
+    "CITY_NAME": "Cranbrook",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Cranbrook", "Canadian Rockies"],
+    "TRANSLATION": {
+      "zh": "克兰布鲁克",
+      "ja": "クランブルック",
+      "ko": "크랜브룩",
+      "ar": "كرانبروك",
+      "ru": "Кранбрук",
+      "th": "แครนบรูค",
+      "latin_diacritics": "Cranbrook"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.6108,
+    "LONG": -115.7825
+  },
+  {
+    "IATA_CODE": "YXS",
+    "CITY_NAME": "Prince George",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Prince George"],
+    "TRANSLATION": {
+      "zh": "乔治王子城",
+      "ja": "プリンス・ジョージ",
+      "ko": "프린스조지",
+      "ar": "برنس جورج",
+      "ru": "Принс-Джордж",
+      "th": "พรินซ์จอร์จ",
+      "latin_diacritics": "Prince George"
+    },
+    "type": "MEDIUM",
+    "LAT": 53.8894,
+    "LONG": -122.6789
+  },
+  {
+    "IATA_CODE": "YXU",
+    "CITY_NAME": "London",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["London", "London Ontario"],
+    "TRANSLATION": {
+      "zh": "伦敦 (安大略)",
+      "ja": "ロンドン (オンタリオ)",
+      "ko": "런던 (온타리오)",
+      "ar": "لندن (أونتاريو)",
+      "ru": "Лондон (Онтарио)",
+      "th": "ลอนดอน (ออนแทรีโอ)",
+      "latin_diacritics": "London"
+    },
+    "type": "MEDIUM",
+    "LAT": 43.0356,
+    "LONG": -81.1539
+  },
+  {
+    "IATA_CODE": "YXX",
+    "CITY_NAME": "Abbotsford",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Abbotsford"],
+    "TRANSLATION": {
+      "zh": "阿伯茨福德",
+      "ja": "アボッツフォード",
+      "ko": "애보츠퍼드",
+      "ar": "أبوتسفورد",
+      "ru": "Эбботсфорд",
+      "th": "แอบบอตสฟอร์ด",
+      "latin_diacritics": "Abbotsford"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.0253,
+    "LONG": -122.3614
+  },
+  {
+    "IATA_CODE": "YXY",
+    "CITY_NAME": "Whitehorse",
+    "REGION": "Yukon",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Whitehorse", "Erik Nielsen"],
+    "TRANSLATION": {
+      "zh": "白马市",
+      "ja": "ホワイトホース",
+      "ko": "화이트호스",
+      "ar": "وايتهورس",
+      "ru": "Уайтхорс",
+      "th": "ไวต์ฮอร์ส",
+      "latin_diacritics": "Whitehorse"
+    },
+    "type": "MEDIUM",
+    "LAT": 60.7095,
+    "LONG": -135.0671
+  },
+  {
+    "IATA_CODE": "YYB",
+    "CITY_NAME": "North Bay",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["North Bay", "Jack Garland"],
+    "TRANSLATION": {
+      "zh": "北湾",
+      "ja": "ノース・ベイ",
+      "ko": "노스베이",
+      "ar": "نورث باي",
+      "ru": "Норт-Бей",
+      "th": "นอร์ทเบย์",
+      "latin_diacritics": "North Bay"
+    },
+    "type": "MEDIUM",
+    "LAT": 46.3636,
+    "LONG": -79.4228
+  },
+  {
+    "IATA_CODE": "YYC",
+    "CITY_NAME": "Calgary",
+    "REGION": "Alberta",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Calgary", "YYC"],
+    "TRANSLATION": {
+      "zh": "卡尔加里",
+      "ja": "カルガリー",
+      "ko": "캘거리",
+      "ar": "كالغاري",
+      "ru": "Калгари",
+      "th": "แคลกะรี",
+      "latin_diacritics": "Calgary"
+    },
+    "type": "LARGE",
+    "LAT": 51.1139,
+    "LONG": -114.0203
+  },
+  {
+    "IATA_CODE": "YYJ",
+    "CITY_NAME": "Victoria",
+    "REGION": "British Columbia",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Victoria", "Sidney"],
+    "TRANSLATION": {
+      "zh": "维多利亚",
+      "ja": "ビクトリア",
+      "ko": "빅토리아",
+      "ar": "فيكتوريا",
+      "ru": "Виктория",
+      "th": "วิกตอเรีย",
+      "latin_diacritics": "Victoria"
+    },
+    "type": "LARGE",
+    "LAT": 48.6469,
+    "LONG": -123.4258
+  },
+  {
+    "IATA_CODE": "YYT",
+    "CITY_NAME": "St. John's",
+    "REGION": "Newfoundland and Labrador",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["St. John's", "Saint John's", "St Johns"],
+    "TRANSLATION": {
+      "zh": "圣约翰斯",
+      "ja": "セント・ジョンズ",
+      "ko": "세인트존스",
+      "ar": "سانت جونز",
+      "ru": "Сент-Джонс",
+      "th": "เซนต์จอนส์",
+      "latin_diacritics": "St. John's"
+    },
+    "type": "LARGE",
+    "LAT": 47.6186,
+    "LONG": -52.7519
+  },
+  {
+    "IATA_CODE": "YYZ",
+    "CITY_NAME": "Toronto",
+    "REGION": "Ontario",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Toronto", "Pearson", "Mississauga", "YYZ"],
+    "TRANSLATION": {
+      "zh": "多伦多",
+      "ja": "トロント",
+      "ko": "토론토",
+      "ar": "تورونتو",
+      "ru": "Торонто",
+      "th": "โทรอนโต",
+      "latin_diacritics": "Toronto"
+    },
+    "type": "LARGE",
+    "LAT": 43.6772,
+    "LONG": -79.6306
+  },
+  {
+    "IATA_CODE": "YZF",
+    "CITY_NAME": "Yellowknife",
+    "REGION": "Northwest Territories",
+    "COUNTRY_NAME": "Canada",
+    "ALIASES": ["Yellowknife", "Sǫ̀mbaʼkʼè"],
+    "TRANSLATION": {
+      "zh": "耶洛奈夫",
+      "ja": "イエローナイフ",
+      "ko": "옐로나이프",
+      "ar": "يلونايف",
+      "ru": "Йеллоунайф",
+      "th": "เยลโลว์ไนฟ์",
+      "latin_diacritics": "Yellowknife"
+    },
+    "type": "MEDIUM",
+    "LAT": 62.4628,
+    "LONG": -114.4403
+  },
+  {
+    "IATA_CODE": "QSF",
+    "CITY_NAME": "Sétif",
+    "REGION": "Sétif Province",
+    "COUNTRY_NAME": "Algeria",
+    "ALIASES": ["Sétif", "Setif", "Ain Arnat", "Aïn Arnat"],
+    "TRANSLATION": {
+      "zh": "塞蒂夫",
+      "ja": "セティフ",
+      "ko": "세티프",
+      "ar": "سطيف",
+      "ru": "Сетиф",
+      "th": "เซติฟ",
+      "latin_diacritics": "Sétif"
+    },
+    "type": "MEDIUM",
+    "LAT": 36.1781,
+    "LONG": 5.3244
+  },
+  {
+    "IATA_CODE": "CZL",
+    "CITY_NAME": "Constantine",
+    "REGION": "Constantine Province",
+    "COUNTRY_NAME": "Algeria",
+    "ALIASES": ["Constantine", "Qacentina", "Cirta", "Mohamed Boudiaf"],
+    "TRANSLATION": {
+      "zh": "君士坦丁",
+      "ja": "コンスタンティーヌ",
+      "ko": "콘스탄틴",
+      "ar": "قسنطينة",
+      "ru": "Константина",
+      "th": "กอนสตองตีน",
+      "latin_diacritics": "Constantine"
+    },
+    "type": "LARGE",
+    "LAT": 36.276001,
+    "LONG": 6.62035
+  },
+  {
+    "IATA_CODE": "TML",
+    "CITY_NAME": "Tamale",
+    "REGION": "Northern Region",
+    "COUNTRY_NAME": "Ghana",
+    "ALIASES": ["Tamale", "Yakubu Tali"],
+    "TRANSLATION": {
+      "zh": "塔马利",
+      "ja": "タマレ",
+      "ko": "타말레",
+      "ar": "تامالي",
+      "ru": "Тамале",
+      "th": "ทามาเล",
+      "latin_diacritics": "Tamale"
+    },
+    "type": "LARGE",
+    "LAT": 9.5572,
+    "LONG": -0.8633
+  },
+  {
+    "IATA_CODE": "DKA",
+    "CITY_NAME": "Katsina",
+    "REGION": "Katsina State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Katsina", "Umaru Musa Yar'adua", "Yar'Adua"],
+    "TRANSLATION": {
+      "zh": "卡齐纳",
+      "ja": "カツィナ",
+      "ko": "카치나",
+      "ar": "كاتسينا",
+      "ru": "Кацина",
+      "th": "กัตซินา",
+      "latin_diacritics": "Katsina"
+    },
+    "type": "MEDIUM",
+    "LAT": 13.0193,
+    "LONG": 7.6822
+  },
+  {
+    "IATA_CODE": "ABV",
+    "CITY_NAME": "Abuja",
+    "REGION": "Federal Capital Territory",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Abuja", "Nnamdi Azikiwe", "FCT"],
+    "TRANSLATION": {
+      "zh": "阿布贾",
+      "ja": "アブジャ",
+      "ko": "아부자",
+      "ar": "أبوجا",
+      "ru": "Абуджа",
+      "th": "อาบูจา",
+      "latin_diacritics": "Abuja"
+    },
+    "type": "LARGE",
+    "LAT": 9.00679,
+    "LONG": 7.26317
+  },
+  {
+    "IATA_CODE": "QUO",
+    "CITY_NAME": "Uyo",
+    "REGION": "Akwa Ibom",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Uyo", "Akwa Ibom"],
+    "TRANSLATION": {
+      "zh": "乌约",
+      "ja": "ウヨ",
+      "ko": "우요",
+      "ar": "أويو",
+      "ru": "Уйо",
+      "th": "อูโย",
+      "latin_diacritics": "Uyo"
+    },
+    "type": "MEDIUM",
+    "LAT": 4.8722,
+    "LONG": 8.0931
+  },
+  {
+    "IATA_CODE": "AKR",
+    "CITY_NAME": "Akure",
+    "REGION": "Ondo State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Akure"],
+    "TRANSLATION": {
+      "zh": "阿库雷",
+      "ja": "アクレ",
+      "ko": "아쿠레",
+      "ar": "أكوري",
+      "ru": "Акуре",
+      "th": "อาคูเร",
+      "latin_diacritics": "Akure"
+    },
+    "type": "MEDIUM",
+    "LAT": 7.2467,
+    "LONG": 5.301
+  },
+  {
+    "IATA_CODE": "BNI",
+    "CITY_NAME": "Benin City",
+    "REGION": "Edo State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Benin City", "Benin", "Ubinu"],
+    "TRANSLATION": {
+      "zh": "贝宁城",
+      "ja": "ベニンシティ",
+      "ko": "베닌시티",
+      "ar": "مدينة بنين",
+      "ru": "Бенин-Сити",
+      "th": "เมืองเบนิน",
+      "latin_diacritics": "Benin City"
+    },
+    "type": "MEDIUM",
+    "LAT": 6.3169,
+    "LONG": 5.5995
+  },
+  {
+    "IATA_CODE": "CBQ",
+    "CITY_NAME": "Calabar",
+    "REGION": "Cross River State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Calabar", "Margaret Ekpo"],
+    "TRANSLATION": {
+      "zh": "卡拉巴尔",
+      "ja": "カラバル",
+      "ko": "칼라바르",
+      "ar": "كالابار",
+      "ru": "Калабар",
+      "th": "คาลาบาร์",
+      "latin_diacritics": "Calabar"
+    },
+    "type": "MEDIUM",
+    "LAT": 4.97601,
+    "LONG": 8.34739
+  },
+  {
+    "IATA_CODE": "ENU",
+    "CITY_NAME": "Enugu",
+    "REGION": "Enugu State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Enugu", "Enegu", "Akanu Ibiam"],
+    "TRANSLATION": {
+      "zh": "埃努古",
+      "ja": "エヌグ",
+      "ko": "에누구",
+      "ar": "إينوغو",
+      "ru": "Энугу",
+      "th": "เอนูกู",
+      "latin_diacritics": "Enugu"
+    },
+    "type": "LARGE",
+    "LAT": 6.4744,
+    "LONG": 7.5618
+  },
+  {
+    "IATA_CODE": "IBA",
+    "CITY_NAME": "Ibadan",
+    "REGION": "Oyo State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Ibadan"],
+    "TRANSLATION": {
+      "zh": "伊巴丹",
+      "ja": "イバダン",
+      "ko": "이바단",
+      "ar": "إيبادان",
+      "ru": "Ибадан",
+      "th": "อิบาดัน",
+      "latin_diacritics": "Ibadan"
+    },
+    "type": "MEDIUM",
+    "LAT": 7.3624,
+    "LONG": 3.97833
+  },
+  {
+    "IATA_CODE": "ILR",
+    "CITY_NAME": "Ilorin",
+    "REGION": "Kwara State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Ilorin", "Ogbomosho", "Tunde Idiagbon"],
+    "TRANSLATION": {
+      "zh": "伊洛林",
+      "ja": "イロリン",
+      "ko": "일로린",
+      "ar": "إلورن",
+      "ru": "Илорин",
+      "th": "อิโลริน",
+      "latin_diacritics": "Ilorin"
+    },
+    "type": "LARGE",
+    "LAT": 8.44,
+    "LONG": 4.4839
+  },
+  {
+    "IATA_CODE": "QOW",
+    "CITY_NAME": "Owerri",
+    "REGION": "Imo State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Owerri", "Sam Mbakwe"],
+    "TRANSLATION": {
+      "zh": "奥韦里",
+      "ja": "オウェリ",
+      "ko": "오웨리",
+      "ar": "أويري",
+      "ru": "Оверри",
+      "th": "โอเวอร์รี",
+      "latin_diacritics": "Owerri"
+    },
+    "type": "MEDIUM",
+    "LAT": 5.4271,
+    "LONG": 7.2061
+  },
+  {
+    "IATA_CODE": "JOS",
+    "CITY_NAME": "Jos",
+    "REGION": "Plateau State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Jos", "Yakubu Gowon"],
+    "TRANSLATION": {
+      "zh": "乔斯",
+      "ja": "ジョス",
+      "ko": "조스",
+      "ar": "جوس",
+      "ru": "Джос",
+      "th": "จอส",
+      "latin_diacritics": "Jos"
+    },
+    "type": "MEDIUM",
+    "LAT": 9.6398,
+    "LONG": 8.8689
+  },
+  {
+    "IATA_CODE": "KAD",
+    "CITY_NAME": "Kaduna",
+    "REGION": "Kaduna State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Kaduna"],
+    "TRANSLATION": {
+      "zh": "卡杜纳",
+      "ja": "カドゥナ",
+      "ko": "카두나",
+      "ar": "كادونا",
+      "ru": "Кадуна",
+      "th": "กาดูนา",
+      "latin_diacritics": "Kaduna"
+    },
+    "type": "LARGE",
+    "LAT": 10.696,
+    "LONG": 7.32011
+  },
+  {
+    "IATA_CODE": "KAN",
+    "CITY_NAME": "Kano",
+    "REGION": "Kano State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Kano", "Mallam Aminu Kano"],
+    "TRANSLATION": {
+      "zh": "卡诺",
+      "ja": "カノ",
+      "ko": "카노",
+      "ar": "كانو",
+      "ru": "Кано",
+      "th": "คาโน",
+      "latin_diacritics": "Kano"
+    },
+    "type": "LARGE",
+    "LAT": 12.0476,
+    "LONG": 8.52462
+  },
+  {
+    "IATA_CODE": "MIU",
+    "CITY_NAME": "Maiduguri",
+    "REGION": "Borno State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Maiduguri", "Yerwa"],
+    "TRANSLATION": {
+      "zh": "迈杜古里",
+      "ja": "マイドゥグリ",
+      "ko": "마이두구리",
+      "ar": "مايدوغوري",
+      "ru": "Майдугури",
+      "th": "ไมดูกูรี",
+      "latin_diacritics": "Maiduguri"
+    },
+    "type": "LARGE",
+    "LAT": 11.8553,
+    "LONG": 13.0809
+  },
+  {
+    "IATA_CODE": "MDI",
+    "CITY_NAME": "Makurdi",
+    "REGION": "Benue State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Makurdi"],
+    "TRANSLATION": {
+      "zh": "马库尔迪",
+      "ja": "マクルディ",
+      "ko": "마쿠르디",
+      "ar": "ماكوردي",
+      "ru": "Макурди",
+      "th": "มาคูร์ดี",
+      "latin_diacritics": "Makurdi"
+    },
+    "type": "MEDIUM",
+    "LAT": 7.7039,
+    "LONG": 8.6139
+  },
+  {
+    "IATA_CODE": "LOS",
+    "CITY_NAME": "Lagos",
+    "REGION": "Lagos State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Lagos", "Murtala Muhammed", "Eko", "Ikeja"],
+    "TRANSLATION": {
+      "zh": "拉各斯",
+      "ja": "ラゴス",
+      "ko": "라고스",
+      "ar": "لاغوس",
+      "ru": "Лагос",
+      "th": "ลากอส",
+      "latin_diacritics": "Lagos"
+    },
+    "type": "LARGE",
+    "LAT": 6.5774,
+    "LONG": 3.321
+  },
+  {
+    "IATA_CODE": "PHC",
+    "CITY_NAME": "Port Harcourt",
+    "REGION": "Rivers State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Port Harcourt", "PH", "Igwuruta"],
+    "TRANSLATION": {
+      "zh": "哈科特港",
+      "ja": "ポートハーコート",
+      "ko": "포트하코트",
+      "ar": "بورت هاركورت",
+      "ru": "Порт-Харкорт",
+      "th": "พอร์ตฮาร์คอร์ต",
+      "latin_diacritics": "Port Harcourt"
+    },
+    "type": "LARGE",
+    "LAT": 5.0155,
+    "LONG": 6.9496
+  },
+  {
+    "IATA_CODE": "SKO",
+    "CITY_NAME": "Sokoto",
+    "REGION": "Sokoto State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Sokoto", "Sadiq Abubakar III"],
+    "TRANSLATION": {
+      "zh": "索科托",
+      "ja": "ソコト",
+      "ko": "소코토",
+      "ar": "سوكوتو",
+      "ru": "Сокото",
+      "th": "โซโกโต",
+      "latin_diacritics": "Sokoto"
+    },
+    "type": "LARGE",
+    "LAT": 12.9303,
+    "LONG": 5.207
+  },
+  {
+    "IATA_CODE": "QRW",
+    "CITY_NAME": "Warri",
+    "REGION": "Delta State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Warri", "Okpe", "Osubi"],
+    "TRANSLATION": {
+      "zh": "瓦里",
+      "ja": "ワリ",
+      "ko": "와리",
+      "ar": "واري",
+      "ru": "Варри",
+      "th": "วาร์รี",
+      "latin_diacritics": "Warri"
+    },
+    "type": "MEDIUM",
+    "LAT": 5.5505,
+    "LONG": 5.8181
+  },
+  {
+    "IATA_CODE": "YOL",
+    "CITY_NAME": "Yola",
+    "REGION": "Adamawa State",
+    "COUNTRY_NAME": "Nigeria",
+    "ALIASES": ["Yola", "Jimeta"],
+    "TRANSLATION": {
+      "zh": "约拉",
+      "ja": "ヨラ",
+      "ko": "욜라",
+      "ar": "يولا",
+      "ru": "Йола",
+      "th": "โยลา",
+      "latin_diacritics": "Yola"
+    },
+    "type": "MEDIUM",
+    "LAT": 9.2575,
+    "LONG": 12.4304
+  },
+  {
+    "IATA_CODE": "NBE",
+    "CITY_NAME": "Enfidha",
+    "REGION": "Sousse",
+    "COUNTRY_NAME": "Tunisia",
+    "ALIASES": ["Enfidha", "Hammamet", "Enfidha-Hammamet"],
+    "TRANSLATION": {
+      "zh": "恩菲达",
+      "ja": "エンフィダ",
+      "ko": "엔피다",
+      "ar": "النفيضة",
+      "ru": "Энфида",
+      "th": "เอนฟิดา",
+      "latin_diacritics": "Enfidha"
+    },
+    "type": "MEDIUM",
+    "LAT": 36.075833,
+    "LONG": 10.438611
+  },
+  {
+    "IATA_CODE": "TUN",
+    "CITY_NAME": "Tunis",
+    "REGION": "Tunis Governorate",
+    "COUNTRY_NAME": "Tunisia",
+    "ALIASES": ["Tunis", "Carthage", "Tunis-Carthage"],
+    "TRANSLATION": {
+      "zh": "突尼斯",
+      "ja": "チュニス",
+      "ko": "튀니스",
+      "ar": "تونس",
+      "ru": "Тунис",
+      "th": "ตูนิส",
+      "latin_diacritics": "Tunis"
+    },
+    "type": "LARGE",
+    "LAT": 36.851002,
+    "LONG": 10.2272
+  },
+  {
+    "IATA_CODE": "DJE",
+    "CITY_NAME": "Djerba",
+    "REGION": "Medenine Governorate",
+    "COUNTRY_NAME": "Tunisia",
+    "ALIASES": ["Djerba", "Jerba", "Zarzis", "Mellita"],
+    "TRANSLATION": {
+      "zh": "杰尔巴",
+      "ja": "ジェルバ",
+      "ko": "제르바",
+      "ar": "جربة",
+      "ru": "Джерба",
+      "th": "เจอร์บา",
+      "latin_diacritics": "Djerba"
+    },
+    "type": "LARGE",
+    "LAT": 33.875,
+    "LONG": 10.7755
+  },
+  {
+    "IATA_CODE": "ANR",
+    "CITY_NAME": "Antwerp",
+    "REGION": "Flanders",
+    "COUNTRY_NAME": "Belgium",
+    "ALIASES": ["Antwerp", "Antwerpen", "Anvers", "Deurne"],
+    "TRANSLATION": {
+      "zh": "安特卫普",
+      "ja": "アントワープ",
+      "ko": "안트베르펜",
+      "ar": "أنتويرب",
+      "ru": "Антверпен",
+      "th": "แอนต์เวิร์ป",
+      "latin_diacritics": "Antwerpen"
+    },
+    "type": "MEDIUM",
+    "LAT": 51.1894,
+    "LONG": 4.46028
+  },
+  {
+    "IATA_CODE": "BRU",
+    "CITY_NAME": "Brussels",
+    "REGION": "Flemish Brabant",
+    "COUNTRY_NAME": "Belgium",
+    "ALIASES": ["Brussels", "Bruxelles", "Brussel", "Zaventem"],
+    "TRANSLATION": {
+      "zh": "布鲁塞尔",
+      "ja": "ブリュッセル",
+      "ko": "브뤼셀",
+      "ar": "بروكسل",
+      "ru": "Брюссель",
+      "th": "บรัสเซลส์",
+      "latin_diacritics": "Bruxelles"
+    },
+    "type": "LARGE",
+    "LAT": 50.9014,
+    "LONG": 4.48444
+  },
+  {
+    "IATA_CODE": "CRL",
+    "CITY_NAME": "Charleroi",
+    "REGION": "Wallonia",
+    "COUNTRY_NAME": "Belgium",
+    "ALIASES": ["Charleroi", "Brussels South", "Gosselies"],
+    "TRANSLATION": {
+      "zh": "沙勒罗瓦",
+      "ja": "シャルルロワ",
+      "ko": "샤를루아",
+      "ar": "شارلروا",
+      "ru": "Шарлеруа",
+      "th": "ชาร์เลอรัว",
+      "latin_diacritics": "Charleroi"
+    },
+    "type": "LARGE",
+    "LAT": 50.4592,
+    "LONG": 4.45382
+  },
+  {
+    "IATA_CODE": "LGG",
+    "CITY_NAME": "Liège",
+    "REGION": "Wallonia",
+    "COUNTRY_NAME": "Belgium",
+    "ALIASES": ["Liège", "Liege", "Luik", "Lüttich", "Grâce-Hollogne"],
+    "TRANSLATION": {
+      "zh": "列日",
+      "ja": "リエージュ",
+      "ko": "리에주",
+      "ar": "لييج",
+      "ru": "Льеж",
+      "th": "ลีแยฌ",
+      "latin_diacritics": "Liège"
+    },
+    "type": "MEDIUM",
+    "LAT": 50.6374,
+    "LONG": 5.44322
+  },
+  {
+    "IATA_CODE": "OST",
+    "CITY_NAME": "Ostend",
+    "REGION": "Flanders",
+    "COUNTRY_NAME": "Belgium",
+    "ALIASES": ["Ostend", "Oostende", "Ostende", "Bruges", "Brugge"],
+    "TRANSLATION": {
+      "zh": "奥斯坦德",
+      "ja": "オーステンデ",
+      "ko": "오스텐더",
+      "ar": "أوستند",
+      "ru": "Остенде",
+      "th": "ออสเทนด์",
+      "latin_diacritics": "Oostende"
+    },
+    "type": "LARGE",
+    "LAT": 51.1989,
+    "LONG": 2.86219
+  },
+  {
+    "IATA_CODE": "HDF",
+    "CITY_NAME": "Heringsdorf",
+    "REGION": "Mecklenburg-Vorpommern",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Heringsdorf", "Zirchow", "Usedom"],
+    "TRANSLATION": {
+      "zh": "黑林斯多夫",
+      "ja": "ヘリングスドルフ",
+      "ko": "헤링스도르프",
+      "ar": "هرينغسدورف",
+      "ru": "Херингсдорф",
+      "th": "เฮริงสดอร์ฟ",
+      "latin_diacritics": "Heringsdorf"
+    },
+    "type": "MEDIUM",
+    "LAT": 53.8787,
+    "LONG": 14.1524
+  },
+  {
+    "IATA_CODE": "BER",
+    "CITY_NAME": "Berlin",
+    "REGION": "Brandenburg",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": [
+      "Berlin",
+      "Brandenburg",
+      "BER",
+      "Willy Brandt",
+      "Schönefeld",
+      "Tegel"
+    ],
+    "TRANSLATION": {
+      "zh": "柏林",
+      "ja": "ベルリン",
+      "ko": "베를린",
+      "ar": "برلين",
+      "ru": "Берлин",
+      "th": "เบอร์ลิน",
+      "latin_diacritics": "Berlin"
+    },
+    "type": "LARGE",
+    "LAT": 52.362247,
+    "LONG": 13.500672
+  },
+  {
+    "IATA_CODE": "DRS",
+    "CITY_NAME": "Dresden",
+    "REGION": "Saxony",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Dresden", "Klotzsche"],
+    "TRANSLATION": {
+      "zh": "德累斯顿",
+      "ja": "ドレスデン",
+      "ko": "드레스덴",
+      "ar": "درسدن",
+      "ru": "Дрезден",
+      "th": "เดรสเดิน",
+      "latin_diacritics": "Dresden"
+    },
+    "type": "LARGE",
+    "LAT": 51.1328,
+    "LONG": 13.7672
+  },
+  {
+    "IATA_CODE": "ERF",
+    "CITY_NAME": "Erfurt",
+    "REGION": "Thuringia",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Erfurt", "Weimar", "Erfurt-Weimar"],
+    "TRANSLATION": {
+      "zh": "埃尔福特",
+      "ja": "エアフルト",
+      "ko": "에르푸르트",
+      "ar": "إرفورت",
+      "ru": "Эрфурт",
+      "th": "แอร์ฟวร์ท",
+      "latin_diacritics": "Erfurt"
+    },
+    "type": "LARGE",
+    "LAT": 50.9798,
+    "LONG": 10.9581
+  },
+  {
+    "IATA_CODE": "FRA",
+    "CITY_NAME": "Frankfurt",
+    "REGION": "Hesse",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": [
+      "Frankfurt",
+      "Frankfurt am Main",
+      "Frankfurt Main",
+      "Francfort"
+    ],
+    "TRANSLATION": {
+      "zh": "法兰克福",
+      "ja": "フランクフルト",
+      "ko": "프랑크푸르트",
+      "ar": "فرانكفورت",
+      "ru": "Франкфурт",
+      "th": "แฟรงก์เฟิร์ต",
+      "latin_diacritics": "Frankfurt am Main"
+    },
+    "type": "LARGE",
+    "LAT": 50.0333,
+    "LONG": 8.5706
+  },
+  {
+    "IATA_CODE": "FMO",
+    "CITY_NAME": "Münster",
+    "REGION": "North Rhine-Westphalia",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": [
+      "Münster",
+      "Munster",
+      "Osnabrück",
+      "Osnabruck",
+      "Greven",
+      "Münster Osnabrück"
+    ],
+    "TRANSLATION": {
+      "zh": "明斯特",
+      "ja": "ミュンスター",
+      "ko": "뮌스터",
+      "ar": "مونستر",
+      "ru": "Мюнстер",
+      "th": "มึนสเตอร์",
+      "latin_diacritics": "Münster"
+    },
+    "type": "LARGE",
+    "LAT": 52.1346,
+    "LONG": 7.68483
+  },
+  {
+    "IATA_CODE": "HAM",
+    "CITY_NAME": "Hamburg",
+    "REGION": "Hamburg",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Hamburg", "Helmut Schmidt", "Fuhlsbüttel"],
+    "TRANSLATION": {
+      "zh": "汉堡",
+      "ja": "ハンブルク",
+      "ko": "함부르크",
+      "ar": "هامبورغ",
+      "ru": "Гамбург",
+      "th": "ฮัมบวร์ก",
+      "latin_diacritics": "Hamburg"
+    },
+    "type": "LARGE",
+    "LAT": 53.6304,
+    "LONG": 9.98823
+  },
+  {
+    "IATA_CODE": "CGN",
+    "CITY_NAME": "Cologne",
+    "REGION": "North Rhine-Westphalia",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Cologne", "Köln", "Koln", "Bonn", "Cologne Bonn", "Köln Bonn"],
+    "TRANSLATION": {
+      "zh": "科隆",
+      "ja": "ケルン",
+      "ko": "쾰른",
+      "ar": "كولونيا",
+      "ru": "Кёльн",
+      "th": "โคโลญ",
+      "latin_diacritics": "Köln"
+    },
+    "type": "LARGE",
+    "LAT": 50.8659,
+    "LONG": 7.14274
+  },
+  {
+    "IATA_CODE": "DUS",
+    "CITY_NAME": "Düsseldorf",
+    "REGION": "North Rhine-Westphalia",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Düsseldorf", "Dusseldorf", "Duesseldorf"],
+    "TRANSLATION": {
+      "zh": "杜塞尔多夫",
+      "ja": "デュッセルドルフ",
+      "ko": "뒤셀도르프",
+      "ar": "دوسلدورف",
+      "ru": "Дюссельдорф",
+      "th": "ดึสเซลดอร์ฟ",
+      "latin_diacritics": "Düsseldorf"
+    },
+    "type": "LARGE",
+    "LAT": 51.2895,
+    "LONG": 6.76678
+  },
+  {
+    "IATA_CODE": "MUC",
+    "CITY_NAME": "Munich",
+    "REGION": "Bavaria",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Munich", "München", "Muenchen", "Franz Josef Strauß"],
+    "TRANSLATION": {
+      "zh": "慕尼黑",
+      "ja": "ミュンヘン",
+      "ko": "뮌헨",
+      "ar": "ميونخ",
+      "ru": "Мюнхен",
+      "th": "มิวนิก",
+      "latin_diacritics": "München"
+    },
+    "type": "LARGE",
+    "LAT": 48.3538,
+    "LONG": 11.7861
+  },
+  {
+    "IATA_CODE": "NUE",
+    "CITY_NAME": "Nuremberg",
+    "REGION": "Bavaria",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Nuremberg", "Nürnberg", "Nurnberg"],
+    "TRANSLATION": {
+      "zh": "纽伦堡",
+      "ja": "ニュルンベルク",
+      "ko": "뉘른베르크",
+      "ar": "نورمبرغ",
+      "ru": "Нюрнберг",
+      "th": "เนือร์นแบร์ก",
+      "latin_diacritics": "Nürnberg"
+    },
+    "type": "LARGE",
+    "LAT": 49.4987,
+    "LONG": 11.0669
+  },
+  {
+    "IATA_CODE": "LEJ",
+    "CITY_NAME": "Leipzig",
+    "REGION": "Saxony",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Leipzig", "Halle", "Leipzig/Halle", "Schkeuditz"],
+    "TRANSLATION": {
+      "zh": "莱比锡",
+      "ja": "ライプツィヒ",
+      "ko": "라이프치히",
+      "ar": "لايبزيغ",
+      "ru": "Лейпциг",
+      "th": "ไลพ์ซิจ",
+      "latin_diacritics": "Leipzig"
+    },
+    "type": "LARGE",
+    "LAT": 51.4324,
+    "LONG": 12.2416
+  },
+  {
+    "IATA_CODE": "SCN",
+    "CITY_NAME": "Saarbrücken",
+    "REGION": "Saarland",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Saarbrücken", "Saarbrucken", "Saarbruecken"],
+    "TRANSLATION": {
+      "zh": "萨尔布吕肯",
+      "ja": "ザールブリュッケン",
+      "ko": "자르브뤼켄",
+      "ar": "ساربروكن",
+      "ru": "Саарбрюккен",
+      "th": "ซาร์บรึคเคิน",
+      "latin_diacritics": "Saarbrücken"
+    },
+    "type": "MEDIUM",
+    "LAT": 49.2146,
+    "LONG": 7.1095
+  },
+  {
+    "IATA_CODE": "STR",
+    "CITY_NAME": "Stuttgart",
+    "REGION": "Baden-Württemberg",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Stuttgart", "Manfred Rommel"],
+    "TRANSLATION": {
+      "zh": "斯图加特",
+      "ja": "シュトゥットガルト",
+      "ko": "슈투트가르트",
+      "ar": "شتوتغارت",
+      "ru": "Штутгарт",
+      "th": "ชตุทท์การ์ท",
+      "latin_diacritics": "Stuttgart"
+    },
+    "type": "LARGE",
+    "LAT": 48.6899,
+    "LONG": 9.22196
+  },
+  {
+    "IATA_CODE": "HAJ",
+    "CITY_NAME": "Hannover",
+    "REGION": "Lower Saxony",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Hannover", "Hanover", "Langenhagen"],
+    "TRANSLATION": {
+      "zh": "汉诺威",
+      "ja": "ハノーファー",
+      "ko": "하노버",
+      "ar": "هانوفر",
+      "ru": "Ганновер",
+      "th": "ฮันโนเฟอร์",
+      "latin_diacritics": "Hannover"
+    },
+    "type": "LARGE",
+    "LAT": 52.461102,
+    "LONG": 9.68507
+  },
+  {
+    "IATA_CODE": "BRE",
+    "CITY_NAME": "Bremen",
+    "REGION": "Bremen",
+    "COUNTRY_NAME": "Germany",
+    "ALIASES": ["Bremen", "Brême"],
+    "TRANSLATION": {
+      "zh": "不来梅",
+      "ja": "ブレーメン",
+      "ko": "브레멘",
+      "ar": "بريمن",
+      "ru": "Бремен",
+      "th": "เบรเมิน",
+      "latin_diacritics": "Bremen"
+    },
+    "type": "LARGE",
+    "LAT": 53.0475,
+    "LONG": 8.78667
+  }
+]
