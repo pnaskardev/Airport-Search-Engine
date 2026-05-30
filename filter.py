@@ -46,3 +46,17 @@ with open("airports.json", "w", encoding="utf-8") as f:
     json.dump(records, f, ensure_ascii=False, indent=2)
 
 print(f"Saved {len(records)} airports to airports.json")
+
+
+import boto3
+from botocore.config import Config
+
+AGENT_ID = "YOUR_AGENT_ID"
+AGENT_ALIAS_ID = "YOUR_ALIAS_ID"
+AWS_REGION = "us-east-1"
+
+bedrock_agent_runtime = boto3.client(
+    "bedrock-agent-runtime",
+    region_name=AWS_REGION,
+    config=Config(retries={"max_attempts": 3})
+)
