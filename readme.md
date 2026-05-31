@@ -4,3 +4,10 @@ docker run -it --rm \
  -v $(pwd)/meili_data:/meili_data \
  getmeili/meilisearch:latest \
  meilisearch --master-key="this-is-a-very-secure-master-key-123"
+
+## run data enrichment pipeline
+
+```
+   cd data/pipeline
+   python enrich.py --input ../raw/airports_raw.csv --output ../enriched/airport_enriched.json
+```
