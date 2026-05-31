@@ -20,8 +20,8 @@ AGENT_ALIAS_ID = os.getenv("AGENT_ALIAS_ID", "YOUR_AGENT_ALIAS_ID")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_KEY_ID")
 
-INPUT_FILE = "airports.csv"
-OUTPUT_FILE = "airports.json"
+INPUT_FILE = "airports_database.csv"
+OUTPUT_FILE = "airports_final_batch.json"
 
 # ==========================================
 # BEDROCK CLIENT
@@ -93,13 +93,13 @@ print("Loading airport data...")
 
 df = pd.read_csv(INPUT_FILE)
 
+failed_iata_codes = [
+   "BVJ", "SVX", "BHU", "IXB","VTZ", "RGN", "SUB", "KOE", "WTB", "YTY"
+]
+
 filtered_df = df[
-    (df["type"].isin(["large_airport","medium_airport"])) &
-    (df["scheduled_service"] == "yes") &
     (df["iata_code"].notna()) &
-    (df["iata_code"] != "") &
-    (df["home_link"].notna()) &
-    (df["home_link"] != "")
+    (df["iata_code"].isin(failed_iata_codes) == True)
 ]
 
 filtered_df = filtered_df.fillna("NaN")
