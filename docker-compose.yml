@@ -12,3 +12,15 @@ services:
       MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
     volumes:
       - ./meili_data:/meili_data
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: airport-search-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./backend/prod.env
+    depends_on:
+      - meilisearch
