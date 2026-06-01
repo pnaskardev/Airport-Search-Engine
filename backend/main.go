@@ -1,12 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
 	"github.com/joho/godotenv"
 	"github.com/pnaskardev/airport-search-engine/backend/config"
+	"github.com/pnaskardev/airport-search-engine/backend/handler"
+	"github.com/pnaskardev/airport-search-engine/backend/search"
 )
 
 func main() {
@@ -17,12 +18,11 @@ func main() {
 	}
 
 	cfg := config.Load()
-	fmt.Println(cfg)
-	// searchClient := search.NewClient(cfg)
+	searchClient := search.NewClient(cfg)
 
 	mux := http.NewServeMux()
-	// mux.HandleFunc("GET /api/search", handler.Search(searchClient))
-	// mux.HandleFunc("GET /api/health", handler.Health())
+	mux.HandleFunc("GET /api/search", handler.Search(searchClient))
+	mux.HandleFunc("GET /api/health", handler.Health())
 
 	log.Printf("listening on %s", cfg.Port)
 	log.Fatal(http.ListenAndServe(cfg.Port, mux))
