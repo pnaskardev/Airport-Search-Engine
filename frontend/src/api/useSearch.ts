@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import type { SearchResult } from "../types/airport";
 
-// Same-origin relative path — Vite (dev/preview) and the production reverse
-// proxy forward /api to the backend, which sends no CORS headers of its own.
-const API_BASE = "";
+const API_BASE =
+  import.meta.env.VITE_API_URL ?? "https://65-2-170-26.sslip.io";
 const DEBOUNCE_MS = 200;
 
 type Status = "idle" | "loading" | "success" | "error";
