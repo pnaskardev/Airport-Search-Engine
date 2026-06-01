@@ -1,0 +1,300 @@
+/* ── Layout ──────────────────────────────────────────────── */
+.page {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header / wordmark ───────────────────────────────────── */
+.header {
+  text-align: center;
+  margin: clamp(48px, 12vh, 120px) 0 36px;
+}
+
+.wordmark {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: clamp(40px, 9vw, 64px);
+  line-height: 1;
+  letter-spacing: -2px;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.fly {
+  color: var(--text-h);
+}
+
+.fairly {
+  color: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  margin-top: 12px;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* ── Search box ──────────────────────────────────────────── */
+.searchWrap {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.inputRow:focus-within,
+.inputRow.active {
+  border-color: var(--accent-border);
+  box-shadow:
+    0 0 0 4px var(--accent-bg),
+    var(--shadow);
+}
+
+.icon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.inputRow:focus-within .icon {
+  color: var(--accent);
+}
+
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: 500 19px/1.4 var(--sans);
+  color: var(--text-h);
+  letter-spacing: 0;
+}
+
+.input::placeholder {
+  color: var(--text);
+  opacity: 0.65;
+}
+
+.clear {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--text);
+  background: var(--code-bg);
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.clear:hover {
+  color: var(--text-h);
+  background: var(--accent-bg);
+}
+
+/* ── Status row ──────────────────────────────────────────── */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 24px;
+  padding: 14px 6px 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.count {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.timing {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Results ─────────────────────────────────────────────── */
+.results {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message,
+.hint {
+  text-align: center;
+  padding: 32px 16px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.hint {
+  line-height: 1.6;
+}
+
+/* ── Airport card ────────────────────────────────────────── */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  text-align: left;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: cardIn 0.32s ease forwards;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.iata {
+  flex: none;
+  width: 60px;
+  text-align: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-h);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.location {
+  margin-top: 3px;
+  font-size: 14px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  flex: none;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pill.large {
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.pill.medium {
+  color: var(--text);
+  background: var(--code-bg);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .iata {
+    width: 52px;
+    font-size: 16px;
+  }
+
+  .card {
+    gap: 14px;
+    padding: 14px 16px;
+  }
+
+  .pill {
+    padding: 4px 8px;
+  }
+}
