@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import type { SearchResult } from "../types/airport";
 
-const API_BASE =
-  import.meta.env.VITE_API_URL ?? "https://65-2-170-26.sslip.io";
+// Relative path: in production Caddy serves the app and the API on the same
+// origin (/api/* -> backend), so no host or CORS is needed. Override with
+// VITE_API_URL for local dev pointing at a remote backend.
+const API_BASE = import.meta.env.VITE_API_URL ?? "";
 const DEBOUNCE_MS = 200;
 
 type Status = "idle" | "loading" | "success" | "error";

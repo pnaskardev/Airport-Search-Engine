@@ -24,3 +24,12 @@ services:
       - ./backend/prod.env
     depends_on:
       - meilisearch
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: airport-search-frontend
+    #   docker compose up --build frontend
+    restart: "no"
+    volumes:
+      - ${FRONTEND_DIST:-/var/www/airport-search-frontend}:/output
