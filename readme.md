@@ -4,6 +4,8 @@ Typo-tolerant, multi-script airport search. A Go API in front of a Meilisearch i
 seeded with OurAirports data enriched offline (aliases + translations + popularity) via
 AWS Bedrock / Claude. React UI on top.
 
+## Working Demo https://65-2-170-26.sslip.io/
+
 ## Architecture
 
 ```
