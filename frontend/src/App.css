@@ -26,11 +26,11 @@
   align-items: baseline;
 }
 
-.fly {
+.air {
   color: var(--text-h);
 }
 
-.fairly {
+.scanner {
   color: var(--accent);
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   -webkit-background-clip: text;

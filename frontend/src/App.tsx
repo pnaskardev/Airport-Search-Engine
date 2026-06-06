@@ -34,8 +34,8 @@ export default function App() {
     <div className="page">
       <header className="header">
         <div className="wordmark">
-          <span className="fly">Fly</span>
-          <span className="fairly">Fairly</span>
+          <span className="air">Air</span>
+          <span className="scanner">Scanner</span>
         </div>
 
         <p className="tagline">Airport Search</p>
