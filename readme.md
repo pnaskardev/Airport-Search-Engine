@@ -1,8 +1,8 @@
 # Fly Fairly — Airport Search Engine
 
 Typo-tolerant, multi-script airport search. A Go API in front of a Meilisearch index,
-seeded with OurAirports data enriched offline (aliases + translations + popularity) via
-AWS Bedrock / Claude. React UI on top.
+seeded with OurAirports data enriched offline (aliases + translations + popularity) by
+Claude Opus 5 through the Batch API. React UI on top.
 
 ## Architecture
 
@@ -13,7 +13,7 @@ React (Vite)  ──►  Go API  ──►  Meilisearch
    OurAirports CSVs ──► backfill.py ──► airports_indexed.json
                             ▲
                             │ aliases + translations
-                    enrich.py (Bedrock / Claude, offline)
+                    enrich.py (Claude Opus 5, Batch API, offline)
 ```
 
 | Component | Stack | Path |
@@ -23,7 +23,8 @@ React (Vite)  ──►  Go API  ──►  Meilisearch
 | Document build | Python 3, standard library | [data/pipeline/backfill.py](data/pipeline/backfill.py) |
 | Index seed | Python 3, standard library | [data/pipeline/seed.py](data/pipeline/seed.py) |
 | Eval harness | Python 3, standard library | [data/pipeline/eval.py](data/pipeline/eval.py) |
-| LLM enrichment | Python 3, boto3, pandas | [data/pipeline/enrich.py](data/pipeline/enrich.py) |
+| LLM enrichment | Python 3, `anthropic` | [data/pipeline/enrich.py](data/pipeline/enrich.py) |
+| Enrichment prompt | versioned Markdown | [data/pipeline/prompts/enrich_v2.md](data/pipeline/prompts/enrich_v2.md) |
 | UI | React 19 + Vite | [frontend/](frontend/) |
 
 ## Run it
@@ -34,16 +35,22 @@ docker compose up -d meilisearch backend   # seed runs automatically, then exits
 python3 data/pipeline/eval.py              # 27/29 vs 14/29 for naive substring
 ```
 
-`backfill.py` and `seed.py` need no dependencies. `enrich.py` is the offline Bedrock pass
-and only needs to run when regenerating aliases and translations.
+`backfill.py`, `seed.py` and `eval.py` are standard library only. `enrich.py` needs
+`pip install -r data/pipeline/requirements.txt` and `ANTHROPIC_API_KEY`, and only runs when
+regenerating aliases and translations:
+
+```bash
+python3 data/pipeline/enrich.py --estimate   # price the job first
+python3 data/pipeline/enrich.py              # submit batch, poll, write
+```
 
 ---
 
 # Approach Memo
 
 **Stack:** Go API + Meilisearch + React/Vite, Python pipeline (standard library for the
-document build and seed, boto3 + Bedrock for the offline enrichment), wired with Docker
-Compose.
+document build, seed and eval; the `anthropic` SDK for the offline enrichment), wired with
+Docker Compose.
 
 **The core bet: do the hard linguistic work offline, keep the runtime a dumb fast lookup.**
 Aliases and multi-script names are pre-computed per airport once and folded into searchable
@@ -62,7 +69,7 @@ You can close that gap at **query time** (expand every keystroke — powerful bu
 non-deterministic, hard to test) or at **index time** (enrich the document so it already
 contains every form a user might type, making matching a trivial lookup). **I chose index-time
 enrichment:** each airport is a "fat" record carrying its IATA code, city, region, country,
-aliases, curated keywords and names across 11 languages. Once the document says "Tokyo,"
+aliases, curated keywords and names across 12 languages. Once the document says "Tokyo,"
 "東京," "Haneda," and "HND," the runtime needs no cleverness.
 
 This is the standard place-search playbook — denormalized documents, alias expansion,
@@ -76,13 +83,15 @@ dataset.
 - **Pruning:** `large`/`medium` airports with `scheduled_service = yes` and a valid IATA code.
   **85,477 → 3,276.** That drops heliports, seaplane bases, military strips and everything
   with no commercial service.
-- **Enrichment (via Claude on Bedrock):** normalized `CITY_NAME`/`COUNTRY_NAME`, `ALIASES`,
-  `TRANSLATIONS` (11 languages), `POPULARITY_SCORE`. Covers 1,255 of 3,276 airports.
+- **Enrichment (Claude Opus 5, Batch API):** normalized `CITY_NAME`/`COUNTRY_NAME`, `ALIASES`,
+  `TRANSLATIONS` (12 languages), `POPULARITY_SCORE`. The committed data covers 1,255 of 3,276
+  airports — it is the output of the v1 Bedrock prompt, before the coverage fix. Re-running
+  `enrich.py` covers all 3,276 and closes both remaining eval failures.
 - **Deterministic fields, no LLM:** `REGION_NAME` from `iso_region` via `regions.csv`,
   `COUNTRY_NAME` fallback via `countries.csv`, `KEYWORDS` straight from the OurAirports
   `keywords` column.
-- **Reliability:** checkpoint after every record, failures appended to JSONL for targeted
-  re-runs, defensive JSON extraction (strips fences, prose and escaped literals).
+- **Reliability:** one batch job rather than 3,276 sequential calls, resumable by batch id,
+  failed request ids written out for a targeted re-run.
 
 ### The pruning mistake, and what it cost
 
@@ -168,25 +177,41 @@ The two remaining failures are honest data gaps, both needing an enrichment re-r
 | Case | Why |
 |---|---|
 | `Roma` → FCO | FCO was one of the airports the old filter dropped, so it was never enriched and has no Italian exonym. `Rome` works. |
-| `서울` → ICN | The enrichment prompt covered 11 languages and Korean was not one of them. ICN's OurAirports `keywords` column is empty, so there was nothing to fall back on. |
+| `서울` → ICN | The v1 prompt asked for 11 languages in prose and Korean was not one of them. ICN's OurAirports `keywords` column is empty, so there was nothing to fall back on. v2 makes all 12 languages `required` schema properties. |
 
 Neither is an engine limitation. Meilisearch's lindera segmenter handles Korean; the strings were
 never generated.
 
 ## LLM use, and where it was wrong
 
-- **Claude Sonnet 3.7 via Bedrock Agent** for enrichment — alias and translation generation is
-  "world knowledge plus structured output," which an LLM does and a static table does not.
-- **Output discipline** was the first battle: responses came wrapped in prose and code fences.
-  Rather than fight the prompt, I made the parser robust — `extract_json()` strips fences, prose
-  and escaped literals, and logs failures instead of crashing.
-- **Where it was wrong, quietly.** It returned nothing for `REGION_NAME` on all 1,258 records, so
-  every state and province search failed. I caught it by coverage-counting the output (`0/1258`),
-  not by spot-checking. It also asked a clarifying question instead of returning JSON for three
-  airports, and those records were indexed anyway with no city and no country.
-- **What I changed as a result.** `REGION_NAME` is a lookup from `iso_region`, not world
-  knowledge, so it should never have been an LLM field at all — it is deterministic now. The
-  three question-shaped records are dropped at build time.
+**The prompt is in the repo**, versioned, with a changelog explaining what each rule is there to
+stop: [`prompts/enrich_v2.md`](data/pipeline/prompts/enrich_v2.md). v1 lived in the AWS Bedrock
+console, which meant it could not be reviewed, diffed, or re-run by anyone else.
+
+- **v1: Claude Sonnet 3.7 via a Bedrock Agent.** Alias and translation generation is "world
+  knowledge plus structured output," which an LLM does and a static table does not. That part of
+  the bet was right. The delivery was wrong in three ways, and all three were silent.
+- **Output discipline.** Responses came wrapped in prose and code fences, so v1 carried a 40-line
+  `extract_json()` that stripped fences, unwrapped Python string literals and hunted for the
+  outermost braces. For three airports (SWO, TKK, HID) the agent returned a *clarifying question*
+  instead of JSON, and those records were indexed anyway with no city and no country.
+- **A field it dropped.** It returned nothing for `REGION_NAME` on all 1,258 records, so every
+  state and province search failed. I caught it by coverage-counting the output (`0/1258`), not by
+  spot-checking.
+- **A field it was never asked for.** The prompt named 11 languages in prose. Korean was not one
+  of them, and because translations came back as a flat list of 22 unlabelled strings, there was
+  no way to notice.
+- **v2: Claude Opus 5 on the first-party API, with structured outputs.** `output_config.format`
+  pins a JSON schema with `additionalProperties: false` and every field `required`, so prose, a
+  code fence, a clarifying question and a missing field are all unrepresentable. `extract_json()`
+  is deleted — about 40 lines of defensive parsing replaced by a schema. Translations are an
+  object keyed by language with all 12 `required`, so the missing-Korean class of bug fails
+  validation instead of shipping. `REGION_NAME` is gone from the prompt entirely.
+- **v2 also costs less and takes an hour instead of a day.** The Batch API runs at 50% of standard
+  pricing and replaced a `time.sleep(30)` loop that needed 10.5 hours for 1,258 airports. The
+  instruction block is byte-identical across all 3,276 requests, so it is the cached prefix and
+  the airport row goes after the breakpoint. `enrich.py --estimate` prices the job with
+  `count_tokens` before spending anything.
 - **What I should have asked first.** OurAirports already ships a hand-curated `keywords` column
   carrying native scripts (`NRT` has `東京`, `PEK` has `北京`) and multi-airport city codes (`TYO`,
   `BJS`, `LON`). The original pipeline discarded it and paid an LLM to reinvent a worse version.
@@ -198,7 +223,8 @@ check whether the field is knowledge at all before spending a model on it.
 ## Build vs buy vs fake
 
 - **Real:** the document build, the index settings, the ranking order, the eval harness, the API.
-- **Bought:** Meilisearch for matching, OurAirports for the base data, Bedrock for enrichment.
+- **Bought:** Meilisearch for matching, OurAirports for the base data and its curated `keywords`
+  column, Claude Opus 5 (Batch API) for enrichment.
 - **Not built:** multi-airport city collapse (`LON` returns all five London airports as separate
   rows rather than one "London (all airports)" result), and any use of `_geo`, which is indexed
   but unused.
@@ -210,8 +236,8 @@ check whether the field is knowledge at all before spending a model on it.
    thing that proves it works, which is backwards.
 2. **Question every filter by measuring it.** The `home_link` mistake was one line of code and one
    missing `len()`.
-3. **Re-run enrichment over all 3,276 airports** with Korean added and `REGION_NAME` removed from
-   the prompt. That closes both remaining eval failures.
+3. **Re-run enrichment over all 3,276 airports** on the v2 prompt. That closes both remaining
+   eval failures; the code and the prompt are ready, it just needs the batch to run.
 4. **Collapse multi-airport cities** so `LON` returns one row.
 5. **Push back on:** "popularity ranking" is not a single correct answer, and the brief treats it
    as one. Whether CDG should beat ORY for `Paris` depends on the user's trip, not on the string.

@@ -63,6 +63,21 @@ def commercial_airports(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     ]
 
 
+def flatten_translations(translations: object) -> list[str]:
+    """Meilisearch wants one flat list of searchable strings.
+
+    enrich.py v2 returns an object keyed by language, because a flat list is exactly
+    what hid the missing Korean in v1 - you cannot count per-language coverage in a
+    list of 22 unlabelled strings. The keys stay in the enriched file for auditing and
+    are flattened only here, at the index boundary. v1's flat list still loads.
+    """
+    if isinstance(translations, dict):
+        return [s for names in translations.values() for s in names]
+    if isinstance(translations, list):
+        return translations
+    return []
+
+
 def build_document(
     raw: dict[str, str],
     enriched: dict | None,
@@ -93,7 +108,7 @@ def build_document(
         "REGION_NAME": regions.get(raw["iso_region"], ""),
         "TYPE": "LARGE" if raw["type"] == "large_airport" else "MEDIUM",
         "ALIASES": enriched.get("ALIASES") or [],
-        "TRANSLATIONS": enriched.get("TRANSLATIONS") or [],
+        "TRANSLATIONS": flatten_translations(enriched.get("TRANSLATIONS")),
         # OurAirports' own alternate-name column, which the enrichment pass
         # discarded. It is hand-curated and free, and it already carries the
         # things the LLM was asked to invent: native scripts (NRT has 東京,

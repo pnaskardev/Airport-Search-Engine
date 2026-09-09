@@ -1,0 +1,4 @@
+# Only enrich.py needs anything. backfill.py, seed.py and eval.py are standard
+# library on purpose, so the seed step runs in a bare python image and the eval
+# runs anywhere.
+anthropic>=1.4.0
