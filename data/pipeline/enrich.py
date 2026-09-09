@@ -135,15 +135,18 @@ def filter_commercial_airports(df: pd.DataFrame) -> pd.DataFrame:
     - large or medium (eliminates heliports, seaplanes, military strips)
     - have scheduled commercial service
     - have a valid IATA code (required for flight search)
-    - have a home link (strong proxy for active commercial operation)
+
+    An earlier version also required a non-empty `home_link`. That looked like
+    a proxy for active commercial operation and was not one: it measures
+    whether a volunteer added a URL to OurAirports. It cut 3,276 airports to
+    1,310 and took ATL, FCO, TUL, CAI and KUL with it, unevenly by region -
+    China kept 25 of 223, Cuba and Mozambique kept none. Keep it removed.
     """
     mask = (
         df["type"].isin(["large_airport", "medium_airport"])
         & (df["scheduled_service"] == "yes")
         & df["iata_code"].notna()
         & (df["iata_code"].str.strip() != "")
-        & df["home_link"].notna()
-        & (df["home_link"].str.strip() != "")
     )
     result = df[mask].copy()
     logger.info("Filtered %d → %d commercial airports", len(df), len(result))
@@ -201,8 +204,8 @@ def build_output_record(
 
 # ---------------------------------------------------------------------------
 # Failure logging
-# Senior rationale: JSONL (one JSON object per line) is append-friendly.
-# You can re-process only failed airports without touching the main output.
+# JSONL (one JSON object per line) is append-friendly: failed airports can
+# be re-processed without touching the main output.
 # ---------------------------------------------------------------------------
 def log_failure(failed_file: Path, iata: str, reason: str) -> None:
     entry = json.dumps({"iata_code": iata, "reason": reason}, ensure_ascii=False)
@@ -212,8 +215,8 @@ def log_failure(failed_file: Path, iata: str, reason: str) -> None:
 
 # ---------------------------------------------------------------------------
 # Checkpoint writer
-# Senior rationale: write after every successful record.
-# If the process dies at record 847, you don't lose 846 records.
+# Write after every successful record. If the process dies at record 847,
+# the first 846 survive.
 # ---------------------------------------------------------------------------
 def checkpoint(output_file: Path, records: list[dict[str, Any]]) -> None:
     output_file.write_text(
@@ -224,8 +227,8 @@ def checkpoint(output_file: Path, records: list[dict[str, Any]]) -> None:
 
 # ---------------------------------------------------------------------------
 # Pipeline entrypoint
-# Senior rationale: all the I/O and orchestration lives here.
-# Business logic (filter, parse, build) is in pure functions above.
+# All I/O and orchestration lives here. Filtering, parsing and record
+# building stay as pure functions above.
 # ---------------------------------------------------------------------------
 def run(cfg: PipelineConfig) -> None:
     logger.info("Starting enrichment pipeline (dry_run=%s)", cfg.dry_run)
@@ -307,8 +310,6 @@ def run(cfg: PipelineConfig) -> None:
 
 # ---------------------------------------------------------------------------
 # CLI
-# Senior rationale: argparse makes the script self-documenting and lets
-# CI/CD override defaults without editing source.
 # ---------------------------------------------------------------------------
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(

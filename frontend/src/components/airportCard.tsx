@@ -9,9 +9,12 @@ interface Props {
 export function AirportCard({ airport, rank }: Props) {
   const isLarge = airport.TYPE === "LARGE";
 
-  const location = airport.REGION_NAME
-    ? `${airport.REGION_NAME}, ${airport.COUNTRY_NAME}`
-    : `${airport.CITY_NAME}, ${airport.COUNTRY_NAME}`;
+  // City, region and country together, because any two of them can be
+  // ambiguous on their own: "London, England, United Kingdom" has to be
+  // distinguishable from "London, Ontario, Canada" at a glance.
+  const location = [airport.CITY_NAME, airport.REGION_NAME, airport.COUNTRY_NAME]
+    .filter(Boolean)
+    .join(", ");
 
   return (
     <div className="card" style={{ animationDelay: `${rank * 40}ms` }}>

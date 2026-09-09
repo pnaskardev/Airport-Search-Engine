@@ -12,6 +12,24 @@ services:
       MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
     volumes:
       - ./meili_data:/meili_data
+
+  # One-shot: pushes index settings and documents, then exits. Without this a
+  # fresh stack comes up with an empty index on default ranking rules, which
+  # is a different search engine from the one the eval was tuned against.
+  # seed.py is standard library only, so a bare python image needs no build.
+  seed:
+    image: python:3.13-slim
+    container_name: airport-search-seed
+    restart: "no"
+    depends_on:
+      - meilisearch
+    environment:
+      MEILISEARCH_URL: http://meilisearch:7700
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
+    volumes:
+      - ./data:/data:ro
+    command: ["python", "/data/pipeline/seed.py"]
+
   backend:
     build:
       context: ./backend

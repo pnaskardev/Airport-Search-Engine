@@ -35,8 +35,8 @@ func (c *Client) Search(q string) (*SearchResult, error) {
 }
 
 // marshalResult converts the raw Meilisearch response into our typed struct.
-// Senior rationale: keeps JSON unmarshalling in one place, not scattered
-// across handler and search logic.
+// Keeps JSON unmarshalling in one place rather than spread across the
+// handler and the search logic.
 func marshalResult(q string, raw *meilisearch.SearchResponse) (*SearchResult, error) {
 	// marshal hits back to JSON then into []Airport
 	// (Meilisearch Go SDK returns []any for hits)
