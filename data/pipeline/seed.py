@@ -23,7 +23,9 @@ import urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+REPO_ROOT = HERE.parent.parent
 DEFAULT_DOCS = HERE.parent / "enriched" / "airports_indexed.json"
+DEFAULT_ENV = REPO_ROOT / ".env"
 
 # Order matters: Meilisearch's `attribute` ranking rule prefers matches in
 # fields listed earlier. IATA code first means "TUL" resolves to the airport
@@ -74,6 +76,28 @@ SETTINGS = {
     # brief's typo case still works.
     "typoTolerance": {"minWordSizeForTypos": {"oneTypo": 5, "twoTypos": 9}},
 }
+
+
+def load_env_file(path: Path) -> None:
+    """Read KEY=value lines from a .env file into the environment.
+
+    Ten lines of standard library instead of python-dotenv, because the seed
+    service runs on a bare `python:3.13-slim` image with no pip install - an
+    import of a third-party package there fails the seed step and leaves the
+    index empty on every cold start.
+
+    Already-set environment variables win, matching python-dotenv's default.
+    That ordering matters: Docker Compose injects MEILI_MASTER_KEY into the
+    container, and a developer's local .env must not override it.
+    """
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip().strip("\"'"))
 
 
 def request(method: str, url: str, key: str, body: object = None) -> dict:
@@ -135,6 +159,10 @@ def seed(base: str, key: str, index: str, docs_path: Path) -> None:
 
 
 def main() -> None:
+    # Before argparse reads its defaults from the environment. In the container
+    # this file does not exist and the variables come from Compose instead.
+    load_env_file(Path(os.getenv("ENV_FILE", DEFAULT_ENV)))
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--docs", type=Path, default=DEFAULT_DOCS)
     parser.add_argument(
