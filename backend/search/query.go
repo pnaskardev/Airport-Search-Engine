@@ -19,11 +19,8 @@ func (c *Client) Search(q string) (*SearchResult, error) {
 	}
 
 	params := &meilisearch.SearchRequest{
-		Limit: int64(defaultLimit),
-		AttributesToRetrieve: []string{
-			"iata_code", "name", "CITY_NAME", "COUNTRY_NAME",
-			"REGION_NAME", "TYPE", "POPULARITY_SCORE", "_geo",
-		},
+		Limit:                int64(defaultLimit),
+		AttributesToRetrieve: AttributesToRetrieve,
 	}
 
 	raw, err := c.index.Search(q, params)

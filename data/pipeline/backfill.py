@@ -34,6 +34,8 @@ import csv
 import json
 from pathlib import Path
 
+from airport_contract import violations
+
 HERE = Path(__file__).resolve().parent
 RAW = HERE.parent / "raw"
 ENRICHED = HERE.parent / "enriched"
@@ -132,7 +134,8 @@ def build_document(
 
 def build(
     airports_csv: Path, enriched_json: Path, regions_csv: Path, countries_csv: Path
-) -> list[dict]:
+) -> tuple[list[dict], list[dict]]:
+    """Index-ready documents, plus the rows the Contract rejected and why."""
     regions = {r["code"]: r["name"] for r in read_csv(regions_csv)}
     countries = {c["code"]: c["name"] for c in read_csv(countries_csv)}
 
@@ -141,16 +144,25 @@ def build(
     }
 
     rows = commercial_airports(read_csv(airports_csv))
-    return [
-        build_document(r, enriched_by_iata.get(r["iata_code"].strip()), regions, countries)
-        for r in rows
-    ]
+    docs: list[dict] = []
+    rejected: list[dict] = []
+    for r in rows:
+        doc = build_document(
+            r, enriched_by_iata.get(r["iata_code"].strip()), regions, countries
+        )
+        problems = violations(doc)
+        if problems:
+            rejected.append({"iata_code": doc["iata_code"], "violations": problems})
+        else:
+            docs.append(doc)
+    return docs, rejected
 
 
-def report(docs: list[dict]) -> None:
+def report(docs: list[dict], rejected: list[dict]) -> None:
     enriched = sum(1 for d in docs if d["ENRICHED"])
     regions = sum(1 for d in docs if d["REGION_NAME"])
     print(f"documents:      {len(docs)}")
+    print(f"rejected:       {len(rejected)}")
     print(f"enriched:       {enriched} ({enriched / len(docs):.0%})")
     print(f"REGION_NAME:    {regions} ({regions / len(docs):.0%})")
 
@@ -164,14 +176,22 @@ def main() -> None:
         "--enriched", type=Path, default=ENRICHED / "airport_enriched.json"
     )
     parser.add_argument("--out", type=Path, default=ENRICHED / "airports_indexed.json")
+    parser.add_argument(
+        "--rejected", type=Path, default=ENRICHED / "airports_rejected.json"
+    )
     args = parser.parse_args()
 
-    docs = build(args.airports, args.enriched, args.regions, args.countries)
+    docs, rejected = build(args.airports, args.enriched, args.regions, args.countries)
     args.out.write_text(
         json.dumps(docs, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    report(docs)
+    args.rejected.write_text(
+        json.dumps(rejected, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    report(docs, rejected)
     print(f"wrote {args.out}")
+    if rejected:
+        print(f"wrote {args.rejected} - fix these before they reach the index")
 
 
 if __name__ == "__main__":
